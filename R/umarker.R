@@ -295,7 +295,7 @@ umarker <- function(obj, scType = 'scRNA', assay = "RNA", slot = "counts", binme
   } else {
     if (length(clusterIDs) != ncol(.mat)) .clusterIDs <- obj@meta.data[[clusterIDs]]
   }
-  .markers <- LLRMarker(mat = .mat, clusterIDs = clusterIDs, binmethod = binmethod, expR = expR, model = model, marker = marker, cutoff = cutoff, scType = scType)
+  .markers <- LLRMarker(mat = .mat, clusterIDs = .clusterIDs, binmethod = binmethod, expR = expR, model = model, marker = marker, cutoff = cutoff, scType = scType)
   return(.markers)
 }
 
