@@ -1,10 +1,10 @@
-Package: markerREC
-Title: Marker recommendation for single cell data
-Version: 0.0.0.9000
+Package: UMarker
+Title: Unique Marker Detection for single-cell data
+Version: 1.0.1
 Authors@R: 
     person("Johan", "Cheung", , "transomics@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-5001-8434"))
-Description: This package is used to detect potential markers for clustered cells from single cell data.
+Description: This package is used to detect potential markers for clustered cells from single-cell data, including scRNA, scATAC, and ST data.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
