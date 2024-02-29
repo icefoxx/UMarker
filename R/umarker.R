@@ -25,7 +25,7 @@ assay2mtx <- function(object, assay = NULL, slot = "counts", min.cells = 3, min.
   if (isTRUE(excludeRM)){
     .genes.all <- rownames(.expMat)
     .qual_qc_terms.h <- tibble::tibble(word_reg = c("^RP[SL]", "^MT-", "^HB[^(P)]"), term_name = c("percent_ribo", "percent_mito", "percent_hb"))
-    .qual_qc_terms.m <- tibble::tibble(word_reg = c("^Rp[sl]", "^Mt-", "^Hb[^(p)]"), term_name = c("percent_ribo", "percent_mito", "percent_hb"))
+    .qual_qc_terms.m <- tibble::tibble(word_reg = c("^Rp[sl]", "^[Mm]t-", "^Hb[^(p)]"), term_name = c("percent_ribo", "percent_mito", "percent_hb"))
     .genes.filter.preset <- grep(stringr::str_c(c(.qual_qc_terms.h$word_reg, .qual_qc_terms.m$word_reg), collapse = "|"), .genes.all, value = T)
     .expMat <- .expMat[!(.genes.all %in% .genes.filter.preset), ]
   }
